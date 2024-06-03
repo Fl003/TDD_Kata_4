@@ -2,8 +2,8 @@
 let username;
 do {
     username = prompt("Bitte gib deinen Namen ein:");
-} while(username == null || username === "");
- 
+} while (username == null || username === "");
+
 document.getElementById("username").innerHTML = username;
 
 // timer
@@ -44,8 +44,7 @@ function initGame() {
         rnd = Math.floor(Math.random() * 8) + 1;
         let tmpCount = 0;
         for (let j = 0; j < cards.length; j++) {
-            if (cards[j] == rnd)
-            {
+            if (cards[j] == rnd) {
                 tmpCount++;
             }
         }
@@ -54,7 +53,7 @@ function initGame() {
             createCard(rnd);
         }
         i++;
-    } while(cards.length < 16);
+    } while (cards.length < 16);
 }
 
 function clearCards() {
@@ -99,7 +98,7 @@ function flipCard(karte) {
     if (karte1 == karte.getAttribute("number")) {
         return;
     }
-        
+
     karte.style.backgroundImage = "url('../pics/card" + karte.getAttribute("number") + ".png')";
     if (karte1 == null) {
         karte1 = karte;
@@ -122,7 +121,7 @@ function checkPair() {
         removeNumber(karte1.getAttribute("number"));
         resetSelectedKarten();
 
-        if(cards.length == 0) {
+        if (cards.length == 0) {
             endOfGame();
             alert("Gratulation!\nDeine Zeit: " + seconds + "s\nNeues Spiel starten?");
             initGame();
@@ -131,7 +130,7 @@ function checkPair() {
     }
     karte1.style.backgroundImage = singlePath;
     karte2.style.backgroundImage = singlePath;
-    resetSelectedKarten();   
+    resetSelectedKarten();
 }
 
 function resetSelectedKarten() {
@@ -140,6 +139,6 @@ function resetSelectedKarten() {
 }
 
 function removeNumber(number) {
-    cards.splice(cards.findIndex(x => x == number), 1);
+    cards.splice(cards.findIndex(x => x === number), 1);
     cards.splice(cards.findIndex(x => x == number), 1);
 }
