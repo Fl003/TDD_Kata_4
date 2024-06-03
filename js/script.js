@@ -95,7 +95,7 @@ function flipCard(karte) {
     if (!cards.includes(parseInt(karte.getAttribute("number")))) {
         return;
     }
-    if (karte1 == karte.getAttribute("number")) {
+    if (karte1 === karte.getAttribute("number")) {
         return;
     }
 
