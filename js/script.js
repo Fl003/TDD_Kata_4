@@ -2,7 +2,7 @@
 let username;
 do {
     username = prompt("Bitte gib deinen Namen ein:");
-} while(username == null || username == "");
+} while(username == null || username === "");
  
 document.getElementById("username").innerHTML = username;
 
