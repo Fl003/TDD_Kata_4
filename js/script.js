@@ -121,7 +121,7 @@ function checkPair() {
         removeNumber(karte1.getAttribute("number"));
         resetSelectedKarten();
 
-        if (cards.length == 0) {
+        if (cards.length === 0) {
             endOfGame();
             alert("Gratulation!\nDeine Zeit: " + seconds + "s\nNeues Spiel starten?");
             initGame();
