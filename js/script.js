@@ -140,5 +140,5 @@ function resetSelectedKarten() {
 
 function removeNumber(number) {
     cards.splice(cards.findIndex(x => x === number), 1);
-    cards.splice(cards.findIndex(x => x == number), 1);
+    cards.splice(cards.findIndex(x => x === number), 1);
 }
