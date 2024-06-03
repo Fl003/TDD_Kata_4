@@ -115,7 +115,7 @@ function flipCard(karte) {
 
 function checkPair() {
     isFlipable = true;
-    if (karte1.getAttribute("number") == karte2.getAttribute("number")) {
+    if (karte1.getAttribute("number") === karte2.getAttribute("number")) {
         karte1.style.backgroundImage = pairPath;
         karte2.style.backgroundImage = pairPath;
         removeNumber(karte1.getAttribute("number"));
