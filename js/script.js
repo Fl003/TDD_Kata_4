@@ -44,7 +44,7 @@ function initGame() {
         rnd = Math.floor(Math.random() * 8) + 1;
         let tmpCount = 0;
         for (let j = 0; j < cards.length; j++) {
-            if (cards[j] == rnd) {
+            if (cards[j] === rnd) {
                 tmpCount++;
             }
         }
